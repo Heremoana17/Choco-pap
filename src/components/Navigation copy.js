@@ -4,8 +4,15 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import '../styles/Navigation.css'
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
 const Navigation = () => {
+
+    // varible pour la modal
+    const[show, setShow] = useState(false)
+    const handleShow = () => setShow(true)
+    const handleClose = () => setShow(false)
 
     // variable pour la sidebar
     const[sidebar, setSidebar] = useState(false)
@@ -28,6 +35,35 @@ const Navigation = () => {
                     </Nav>
                 </Navbar.Collapse>
             </Container>
+            {/* code de la modal */}
+            {/* <Modal
+                show={show}
+                onHide={handleClose}
+                backdrop="static"
+                keyboard={false}
+            >
+                <Modal.Header>
+                    <div className='container-fluid row'>
+                        <div className='col-1 btnClose pt-2'>
+                            <img src="./images/close.png" alt="" style={{width:30}} onClick={handleClose}/>
+                        </div>
+                        <h2 className='col-1 offset-4 pt-2'>PANIER</h2>
+                    </div>
+                </Modal.Header>
+                <Modal.Body>
+                </Modal.Body>
+                <Modal.Footer>
+                    <div className='container-fluid row text-center p-3'>
+                        <h2 className='mb-4'>TOTAL : XX €</h2>
+                        <Button className='mb-4 btnPanier'>
+                            REINITIALISER LE PANIER
+                        </Button>
+                        <Button className='btnPanier'>
+                            VALIDER LE PANIER
+                        </Button>
+                    </div>
+                </Modal.Footer>
+            </Modal> */}
 
             {/* code pour la sidebar */}
             <div className='navbar'>

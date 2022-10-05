@@ -6,7 +6,7 @@ const Card = ({produit}) => {
     return (
 
         // lien vers la page <FicheProduit> ou doit apparaitre la description plus detailler du produit
-        <NavLink to='/FicheProduit'className='col-12 col-md-5 col-lg-3 my-3 my-md-2 mx-0 mx-md-3 px-0 rounded' id='card'>
+        <NavLink to={'produit/' + produit.id} className='col-12 col-md-5 col-lg-3 my-3 my-md-2 mx-0 mx-md-3 px-0 rounded' id='card'>
 
             <li >
 

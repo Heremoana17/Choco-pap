@@ -1,13 +1,12 @@
 import React from 'react';
 import '../styles/Produit.css'
 
-const Produit = ({produit}) => {
-
+const Produit = ({ produit }) => {
     return (
         <div id='divProduit'>
             <div className='container-fluid d-flex flex-column flex-md-row pt-5'>
                 <div className='col-6 order-2 order-md-1'>
-                    <img src={produit.image} alt={produit.title} className='img-fluid p-4'/>
+                    <img src={produit.image} alt="" className='img-fluid p-4'/>
                 </div>
                 <div className='col-6 p-4 order-1'>
                     <h1 className='mb-4' id='h1'>{produit.title}</h1>

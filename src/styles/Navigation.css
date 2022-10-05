@@ -17,12 +17,51 @@
     border: none;
     transition: 0.5s;
     font-family: droidserif, arial;
+    border-radius: 5px;
+    height: 40px;
 }
 .btnPanier:hover{
     transform: scale(1.03);
+    background-color: var(--jaune);
 }
 .btnClose:hover{
     transition: 0.5s;
     transform: scale(1.03);
     cursor: pointer;
+}
+
+.nav-menu{
+    background-color: var(--marronfoncer);
+    color: var(--orange);
+    width: 50%;
+    height: 100vh;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    transition: 850ms;
+    z-index: 5;
+}
+@media screen and (max-width: 768px){
+    .nav-menu{
+        width: 100%;
+    }
+}
+
+.nav-menu.active{
+    right: 0;
+    transition: 350ms;
+}
+
+#headerPanier{
+    background-color: var(--marron);
+    height: 15vh;
+}
+
+#divPanier{
+ height: 55vh;
+}
+#footerPanier{
+    background-color: var(--marron);
+    height: 30vh;
 }
