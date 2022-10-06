@@ -3,10 +3,11 @@ import Carrousel from '../components/Carrousel';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
 
-const Acceuil = () => {
+const Acceuil = (props) => {
+    const {countCartItems, cartItems} = props
     return (
         <div>
-            <Navigation/>
+            <Navigation countCartItems={cartItems.length} cartItems={cartItems}/>
             <Carrousel/>
             <Footer/>
         </div>

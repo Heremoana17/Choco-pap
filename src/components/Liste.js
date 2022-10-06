@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react';
 import JsonData from '../json/products.json'
 import Card from './Card';
 import '../styles/Liste.css'
+import { CarouselItem } from 'react-bootstrap';
 
-const Liste = () => {
+const Liste = (props) => {
 
-    // var pour la data provenant du useEffect
-    const[data, setData] = useState([]);
+    const {data, onAdd, onRemove, cartItems} = props
+
     // var pour les input de type radio
     const[selectedRadio,setSelectedRadio] = useState();
     // var pour les label des input de type radio
@@ -15,11 +16,6 @@ const Liste = () => {
     const[rangeValue, setRangeValue] = useState(20);
     // var pour l'input de type range Notes
     const[rangeValueNote, setRangeValueNote] = useState(5)
-
-    // hook pour récupérer la data provenant du fichier JSON dans le dossier src/json
-    useEffect(()=>{
-        setData(JsonData)
-    },[])
 
     return (
         <div className='container-fluid mx-0 row px-0 content'>
@@ -77,7 +73,7 @@ const Liste = () => {
             <ul className='list-unstyled col-12 col-md-8 col-lg-9 row mx-auto justify-content-between'>
                 {data.filter((produit) => produit.price<=rangeValue)
                     .filter((produit) => produit.note<=rangeValueNote)
-                    .map((produit,id) => (<Card key={id} produit={produit}/>))}
+                    .map((produit,id) => (<Card key={id} produit={produit} onAdd={onAdd} onRemove={onRemove} item={cartItems.find((x) => x.id === produit.id)}/>))}
             </ul>
         </div>
     );
