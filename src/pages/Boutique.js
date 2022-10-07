@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 
 const Boutique = (props) => {
 
-    // recupération de la data par les props
+    // recupération des props
     const {data, onAdd, onRemove, countCartItems, cartItems} = props
 
     return (

@@ -12,18 +12,26 @@ const App = () => {
   const [data, setData] = useState([])
   useEffect(() => {setData(jsonData)},[])
 
+  // déclaration de la variable qui représente le panier
   const [cartItems, setCartItems] = useState([])
-  // creation des variable onAdd et onRemove
+
+  const stopPropagation = (e) => {
+    e.stopPropagation()
+  }
+
+  // creation des variable onAdd pour ajouter des produits et onRemove pour retirer 
   const onAdd = (produit) => {
     const exist = cartItems.find((x) => x.id === produit.id);
     if (exist) {
       const newCartItems = cartItems.map((x) => 
       x.id === produit.id ? {...exist, qty: exist.qty + 1 } : x );
       setCartItems(newCartItems)
+      // enregistrement du panier dans le localstorage
       localStorage.setItem('cartItems', JSON.stringify(newCartItems));
     } else {
       const newCartItems = [...cartItems, {...produit, qty: 1 }];
       setCartItems(newCartItems);
+      // enregistrement du panier dans le localstorage
       localStorage.setItem('cartItems', JSON.stringify(newCartItems));
     }
   }
@@ -32,15 +40,18 @@ const App = () => {
     if (exist.qty === 1) {
       const newCartItems = cartItems.filter((x) => x.id !== produit.id);
       setCartItems(newCartItems);
+      // enregistrement du panier dans le localstorage
       localStorage.setItem('cartItems', JSON.stringify(newCartItems));
     }else{
       const newCartItems = cartItems.map((x) =>
       x.id === produit.id ? {...exist, qty: exist.qty - 1} : x);
       setCartItems(newCartItems);
+      // enregistrement du panier dans le localstorage
       localStorage.setItem('cartItems', JSON.stringify(newCartItems));
     }
   }
 
+  // recupération du panier dans le localstorage
   useEffect(() => {
     setCartItems(localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [] );
   },[])
@@ -49,11 +60,11 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         {/* route ver la page d'accueil */}
-        <Route path='/' element={<Acceuil countCartItems={cartItems.length} cartItems={cartItems}/>}/>
+        <Route path='/' element={<Acceuil countCartItems={cartItems.length} cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}/>}/>
         {/* route ver la boutique */}
         <Route path='/boutique' element={<Boutique data={data} onAdd={onAdd} onRemove={onRemove} countCartItems={cartItems.length} cartItems={cartItems}/> }/>
         {/* route vers la page fiche produit */}
-        <Route path='/boutique/produit/:id' element={<FicheProduit/>}/>
+        <Route path='/produit:id' element={<FicheProduit countCartItems={cartItems.length} cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}/>}/>
         {/* route vers la page acceuil en cas d'erreur 404 */}
         <Route path='/*' element={<NotFound/>}/>
       </Routes>

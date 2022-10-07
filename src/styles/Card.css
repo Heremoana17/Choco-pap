@@ -28,3 +28,7 @@
     font-size: large;
     font-weight: 600;
 }
+.addRemProduit:hover{
+    transition: 0.4s;
+    transform: scale(1.1);
+}

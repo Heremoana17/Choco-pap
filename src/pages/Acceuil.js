@@ -4,10 +4,13 @@ import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
 
 const Acceuil = (props) => {
-    const {countCartItems, cartItems} = props
+
+    //recupération des props
+    const {cartItems, onAdd, onRemove} = props
+    
     return (
         <div>
-            <Navigation countCartItems={cartItems.length} cartItems={cartItems}/>
+            <Navigation countCartItems={cartItems.length} cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}/>
             <Carrousel/>
             <Footer/>
         </div>

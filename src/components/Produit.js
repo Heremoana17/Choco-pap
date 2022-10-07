@@ -1,7 +1,9 @@
 import React from 'react';
 import '../styles/Produit.css'
 
-const Produit = ({produit}) => {
+const Produit = (props) => {
+
+    const{produit, onAdd, onRemove, item} = props
 
     return (
         <div id='divProduit'>
@@ -13,10 +15,16 @@ const Produit = ({produit}) => {
                     <h1 className='mb-4' id='h1'>{produit.title}</h1>
                     <h2 className='mb-4'>{produit.price} €</h2>
                     <p className='mb-4'>{produit.description}</p>
-                    <div>
+                    {item ? 
+                        <div className='mt-5'>
+                            <button className='addRemProduit' onClick={() => onRemove(item)}> - </button>
+                            <span>{item.qty}</span>
+                            <button className='addRemProduit' onClick={() => onAdd(item)}> + </button>
+                        </div> : 
+                        <button type='button' id='btnProduit' className='rounded mt-4' onClick={() => onAdd(produit)}>AJOUTER AU PANIER</button>}
+                    {/* <div>
                         <input type="number" id='inputNumber' className='rounded me-4' placeholder='Nombre de produit'/>
-                        <button type='button' id='btnProduit' className='rounded mt-4'>AJOUTER AU PANIER</button>
-                    </div>
+                    </div> */}
                 </div>
             </div>
             <div className='col-12 p-5'>

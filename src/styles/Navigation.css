@@ -30,7 +30,7 @@
     cursor: pointer;
 }
 
-.nav-menu{
+.sidePanier{
     background-color: var(--marronfoncer);
     color: var(--orange);
     width: 50%;
@@ -43,12 +43,12 @@
     z-index: 5;
 }
 @media screen and (max-width: 768px){
-    .nav-menu{
+    .sidePanier{
         width: 100%;
     }
 }
 
-.nav-menu.active{
+.sidePanier.active{
     right: 0;
     transition: 350ms;
 }
@@ -80,4 +80,8 @@
     margin: 0 10px;
     font-size: large;
     font-weight: 600;
+}
+.addremPanier:hover{
+    transition: 0.3s;
+    transform: scale(1.1);
 }
