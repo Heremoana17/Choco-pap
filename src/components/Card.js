@@ -13,7 +13,7 @@ const Card = (props) => {
 
     return (
         // lien vers la page <FicheProduit> ou doit apparaitre la description plus detailler du produit
-        <NavLink to={`/produit${produit.id}`} className='col-12 col-md-5 col-lg-3 my-3 my-md-2 mx-0 mx-md-3 px-0 rounded' id='card' onClick={(e) => e.preventDefault()}>
+        <NavLink to={`/produit${produit.id}`} className='col-12 col-md-5 col-lg-3 my-3 my-md-2 mx-0 mx-md-3 px-0 rounded' id='card' >
             <li >
                     {/* div pour l'image' du produit */}
                     <div>
@@ -25,7 +25,7 @@ const Card = (props) => {
                         <h2>{produit.title}</h2>
                         <p>{produit.price+'€'}</p>
                         <p>{'Note: '+produit.note}</p>
-                        <div onClick={(e) => e.stopPropagation()}>
+                        <div onClick={(e) => e.preventDefault()}>
                             {item ? <div>
                                 <button className='addRemProduit' onClick={() => onRemove(produit)}> - </button>
                                 <span>{item.qty}</span>
