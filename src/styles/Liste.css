@@ -1,6 +1,24 @@
-.content{
-    background-color: var(--orange);
+.list{
+    background-image:
+    linear-gradient(160deg, var(--orange) 25%, transparent 55%),
+    linear-gradient(351deg, var(--orange) 41%, transparent 70%),
+    url('../asset/accueil1.jpg');
+    background-repeat: no-repeat;
+    background-position: top;
 }
+
 aside{
     background-color: var(--white);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    animation: filter ease 0.8s;
+}
+@keyframes filter{
+    0%{
+        opacity: 0;
+        transform: translate(-80px, 0px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
 }

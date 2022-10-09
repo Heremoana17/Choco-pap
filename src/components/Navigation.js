@@ -10,22 +10,24 @@ const Navigation = (props) => {
     //recupération des props
     const {countCartItems, onAdd, onRemove, cartItems} = props
 
-    // variable pour afficher ou masquer le panier
+      // variable pour afficher ou masquer le panier
     const[panier, setPanier] = useState(false)
     const showPanier = () => setPanier(!panier)
+    // variable pour fermer le panier
+    const closePanier = () => {panier && setPanier(false)}
 
     //déclaration de la variable qui contient le prix du panier
     const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0)
 
     return (
-        <Navbar expand="lg" style={{backgroundColor:'var(--marron)'}}>
-            <Container fluid >
+        <Navbar expand="lg" style={{backgroundColor:'var(--marron)'}} >
+            <Container fluid onClick={() => closePanier()}>
                 <Navbar.Brand className='ms-2'>
                     <NavLink to={'/'}><img src="./images/logo.png" alt="logo" width={70}/></NavLink>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll"/>
                 <Navbar.Collapse id="navbarScroll">
-                    <Nav className="me-auto offset-lg-7 offset-xl-8 fs-4" style={{ maxHeight: '100px' }} navbarScroll>
+                    <Nav className="me-auto offset-lg-7 offset-xl-8 fs-4" style={{ maxHeight: '280px' }} navbarScroll>
                         <ul className='d-lg-flex mb-0 px-0' >
                             <NavLink to={'/'} className='me-2 lien pt-md-2 px-4'><li title='vers la page accueil'>Acceuil</li> </NavLink>
                             <NavLink to={'/boutique'} className='me-2 lien pt-md-2 pe-4'> <li title='vers la boutique'>Boutique</li></NavLink>

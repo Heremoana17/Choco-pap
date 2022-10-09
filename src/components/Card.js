@@ -7,10 +7,6 @@ const Card = (props) => {
     //recupération des props
     const{produit, onAdd, onRemove, item} = props
 
-    const stop = (e) => {
-        e.stopPropagation();
-    }
-
     return (
         // lien vers la page <FicheProduit> ou doit apparaitre la description plus detailler du produit
         <NavLink to={`/produit${produit.id}`} className='col-12 col-md-5 col-lg-3 my-3 my-md-2 mx-0 mx-md-3 px-0 rounded' id='card' >

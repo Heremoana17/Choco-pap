@@ -12,7 +12,8 @@
           "caramel": false,
           "noix": true,
           "fruit": true,
-          "liqueur": false
+          "liqueur": false,
+          "Tous": true
         },
         "description": "Cerisier - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "ingredients": "Cerise enrobée de pâtes d'amandes, de chocolat au lait et d'éclat de noisettes. Allergènes : SOJA, LAIT (LACTOSE). Contient de l'anhydride sulfureux"
@@ -30,7 +31,8 @@
           "caramel": true,
           "noix": false,
           "fruit": false,
-          "liqueur": false
+          "liqueur": false,
+          "Tous": true
         },
         "description": " Coulis Caramel - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "ingredients": "Coulis de caramel enrobé de chocolat au lait. Allergènes : SOJA, LAIT (LACTOSE). Contient de l'anhydride sulfureux"
@@ -48,7 +50,8 @@
           "caramel": false,
           "noix": false,
           "fruit": false,
-          "liqueur": true
+          "liqueur": true,
+          "Tous": true
         },
         "description": " Douceur exotique - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "ingredients": "Liqueur aromatisée à la cerise enrobée de chocolat au lait. Allergènes : SOJA, LAIT (LACTOSE). Contient de l'anhydride sulfureux"
@@ -66,7 +69,8 @@
           "caramel": false,
           "noix": false,
           "fruit": false,
-          "liqueur": false
+          "liqueur": false,
+          "Tous": true
         },
         "description": "Blanc Passion - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "ingredients": "Pâte à la noix de coco enrobée de chocolat blanc. Allergènes : SOJA, LAIT (LACTOSE). Contient de l'anhydride sulfureux"
@@ -84,7 +88,8 @@
           "caramel": false,
           "noix": true,
           "fruit": false,
-          "liqueur": false
+          "liqueur": false,
+          "Tous": true
         },
         "description": "Douceur croquante - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "ingredients": "Noisette enrobée de chocolat au lait. Allergènes : SOJA, LAIT (LACTOSE). Contient de l'anhydride sulfureux"
@@ -102,7 +107,8 @@
           "caramel": false,
           "noix": false,
           "fruit": false,
-          "liqueur": false
+          "liqueur": false,
+          "Tous": true
         },
         "description": "Le Zèbre - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "ingredients": "Mixe de chocolat blanc et de chocolat au lait. Allergènes : SOJA, LAIT (LACTOSE). Contient de l'anhydride sulfureux"
@@ -120,7 +126,8 @@
           "caramel": false,
           "noix": false,
           "fruit": true,
-          "liqueur": true
+          "liqueur": true,
+          "Tous": true
         },
         "description": "Coulis Fraise - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "ingredients": "Morceau de fraise à la liqueur entièrement enrobée de chocolat au lait et d'éclat de noisettes. Allergènes : SOJA, LAIT (LACTOSE). Contient de l'anhydride sulfureux"
@@ -138,7 +145,9 @@
           "caramel": false,
           "noix": false,
           "fruit": false,
-          "liqueur": false
+          "liqueur": false,
+          "Tous": true
+
         },
         "description": "Noir Passion - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "ingredients": "Chocolat noir au coeur fondant. Allergènes : SOJA, LAIT (LACTOSE). Contient de l'anhydride sulfureux"
@@ -156,7 +165,8 @@
           "caramel": true,
           "noix": true,
           "fruit": false,
-          "liqueur": false
+          "liqueur": false,
+          "Tous": true
         },
         "description": "Fantaisie - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "ingredients": "Noix enrobée de chocolat au lait et parcemée de billes de sucre colorées. Allergènes : SOJA, LAIT (LACTOSE). Contient de l'anhydride sulfureux"
@@ -174,7 +184,8 @@
           "caramel": true,
           "noix": false,
           "fruit": false,
-          "liqueur": false
+          "liqueur": false,
+          "Tous": true
         },
         "description": "Caramel Salé - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "ingredients": "Caramel au beurre salé avec un coeur en poudre chocolatée. Allergènes : SOJA, LAIT (LACTOSE). Contient de l'anhydride sulfureux"

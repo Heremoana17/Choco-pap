@@ -3,6 +3,18 @@
     background-color: var(--marron);
     transition: 0.4s;
     text-decoration: none;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    animation: card ease 0.8s;
+}
+@keyframes card {
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 #card:hover{
     transform: scale(1.05);

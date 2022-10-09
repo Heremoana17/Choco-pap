@@ -6,30 +6,30 @@ import '../styles/Carrousel.css'
 const Carrousel = () => {
     return (
         <div>
-            <div className='col-6 offset-3 text-center position-absolute mt-5' style={{zIndex:1, color: 'var(--orange)'}}>
+            <div className='col-6 offset-3 text-center position-absolute mt-5' style={{zIndex:1, color: 'var(--orange)', height:200}}>
                 <h1 className='display-2'>CHOCO PAP</h1>
             </div>
-            <div className="position-absolute top-50 start-50 translate-middle" style={{zIndex:1}}>
-                <div className='mt-md-5'>
+            <div >
+                <div className='position-absolute btnBoutique' >
                     <NavLink to={'/boutique'} id='btnCaroussel' className='btn btn-lg mt-md-5'>VOIR LA BOUTIQUE</NavLink>
                 </div>
             </div>
             <Carousel >
-                <Carousel.Item style={{height:600}}>
+                <Carousel.Item className='carousel'>
                     <img
-                    className="d-block w-100 imgFlou"
+                    className="d-block w-100 imgFlou img-fluid"
                     src='./images/accueil1.jpg'
                     alt="First slide"
                     />
                 </Carousel.Item>
-                <Carousel.Item style={{height:600}}>
+                <Carousel.Item className='carousel'>
                     <img
                     className="d-block w-100 imgFlou"
                     src='./images/accueil2.jpg'
                     alt="Second slide"
                     />
                 </Carousel.Item>
-                <Carousel.Item style={{height:600}}>
+                <Carousel.Item className='carousel'>
                     <img
                     className="d-block w-100 imgFlou"
                     src='./images/accueil3.jpg'

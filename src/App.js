@@ -15,10 +15,6 @@ const App = () => {
   // déclaration de la variable qui représente le panier
   const [cartItems, setCartItems] = useState([])
 
-  const stopPropagation = (e) => {
-    e.stopPropagation()
-  }
-
   // creation des variable onAdd pour ajouter des produits et onRemove pour retirer 
   const onAdd = (produit) => {
     const exist = cartItems.find((x) => x.id === produit.id);
@@ -62,7 +58,7 @@ const App = () => {
         {/* route ver la page d'accueil */}
         <Route path='/' element={<Acceuil countCartItems={cartItems.length} cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}/>}/>
         {/* route ver la boutique */}
-        <Route path='/boutique' element={<Boutique data={data} onAdd={onAdd} onRemove={onRemove} countCartItems={cartItems.length} cartItems={cartItems}/> }/>
+        <Route path='/boutique' element={<Boutique data={data} onAdd={onAdd} onRemove={onRemove} countCartItems={cartItems.length} cartItems={cartItems}/>}/>
         {/* route vers la page fiche produit */}
         <Route path='/produit:id' element={<FicheProduit countCartItems={cartItems.length} cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}/>}/>
         {/* route vers la page acceuil en cas d'erreur 404 */}
