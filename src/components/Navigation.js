@@ -8,7 +8,7 @@ import '../styles/Navigation.css'
 const Navigation = (props) => {
     
     //recupération des props
-    const {countCartItems, onAdd, onRemove, cartItems} = props
+    const {countCartItems, onAdd, onRemove, cartItems, onDelete} = props
 
       // variable pour afficher ou masquer le panier
     const[panier, setPanier] = useState(false)
@@ -20,7 +20,7 @@ const Navigation = (props) => {
     const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0)
 
     return (
-        <Navbar expand="lg" style={{backgroundColor:'var(--marron)'}} >
+        <Navbar className='navbar-dark' expand="lg" style={{backgroundColor:'var(--marron)'}} >
             <Container fluid onClick={() => closePanier()}>
                 <Navbar.Brand className='ms-2'>
                     <NavLink to={'/'}><img src="./images/logo.png" alt="logo" width={70}/></NavLink>
@@ -71,7 +71,7 @@ const Navigation = (props) => {
                         {countCartItems !== 0 && 
                         <footer className='d-flex flex-column justify-content-center text-center pb-4 mt-auto' id='footerPanier'>
                             <h2 className='my-5'>TOTAL : {itemsPrice.toFixed(2)} €</h2>
-                            <input type='button' className='offset-2 col-8 mb-4 btnPanier' value='REINITIALISER LE PANIER'/>
+                            <input type='button' className='offset-2 col-8 mb-4 btnPanier' value='REINITIALISER LE PANIER' onClick={onDelete}/>
                             <input type='submit' className='offset-2 col-8 btnPanier' value='VALIDER LE PANIER' onClick={() => alert('Votre commande a bien été pris en compte')}/>
                         </footer>}
                     </div>

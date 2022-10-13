@@ -8,7 +8,7 @@ import Produit from '../components/Produit';
 
 const FicheProduit = (props) => {
     
-    const {countCartItems, cartItems, onAdd, onRemove} = props
+    const {cartItems, onAdd, onRemove, onDelete} = props
 
     // variable pour utiliser l'id du produit dans l'url
     const { id } = useParams();
@@ -16,7 +16,7 @@ const FicheProduit = (props) => {
     
     useEffect(() => {
         JsonData.map((item) => {
-            if (item.id === id); {
+            if (item.id === id) {
                 setProduit(item)
             }
         })
@@ -24,7 +24,7 @@ const FicheProduit = (props) => {
 
     return (
         <div>
-            <Navigation countCartItems={cartItems.length} cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}/>
+            <Navigation countCartItems={cartItems.length} cartItems={cartItems} onAdd={onAdd} onRemove={onRemove} onDelete={onDelete}/>
             <Produit produit={produit} onAdd={onAdd} onRemove={onRemove} item={cartItems.find((x) => x.id === produit.id)}/>
             <Footer/>
         </div>
